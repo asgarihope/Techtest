@@ -19,4 +19,7 @@ class _BaseRepository implements _BaseRepositoryInterface {
 		return $this->model;
 	}
 
+	public function updateBy(string $column, $value, array $data): bool {
+		return $this->model->where("{$column}", $value)->update($data);
+	}
 }

@@ -9,5 +9,6 @@ interface _BaseRepositoryInterface
 
     public function create(array $attributes): Model;
 
+	public function updateBy(string $column, $value, array $data): bool ;
 
 }
